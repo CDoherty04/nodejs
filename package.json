@@ -1,0 +1,22 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CDoherty04/nodejs.git"
+  },
+  "author": "Charlie Doherty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CDoherty04/nodejs/issues"
+  },
+  "homepage": "https://github.com/CDoherty04/nodejs#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

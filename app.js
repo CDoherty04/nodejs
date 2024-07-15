@@ -1,20 +1,12 @@
-const http = require("http")
+const express = require("express")
+const app = express()
 
-function handleRequests(request, response) {
-    if (request.url === "/") {
-        response.statusCode = 200
-        response.end("<h1>Hello</h1>")
-    }
-    else if (request.url === "/today") {
-        response.statusCode = 200
-        response.end("<h1>" + new Date().toISOString() + "</h1>")
-    }
-    else {
-        response.statusCode = 404
-        response.end("<h1>Page Unavailable</h1>")
-    }
-}
+app.get("/", function (req, res) {
+    res.send("<h1>Hello</h1>")
+})
 
-const server = http.createServer(handleRequests)
+app.get("/today", function (req, res) {
+    res.send("<h1>" + new Date().toISOString() + "</h1>")
+})
 
-server.listen(3000)
+app.listen(3000)
